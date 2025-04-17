@@ -16,8 +16,20 @@ public class CellPhone {
 
     }
 
-    public void dial(String callingNumber) {
-        System.out.println(this.owner + " 's Phone is calling " + callingNumber);
+    public CellPhone(int serialNumber, String model, String carrier, String phoneNumber, String owner) {
+        this.serialNumber = serialNumber;
+        this.model =model;
+        this.carrier = carrier;
+        this.phoneNumber = phoneNumber;
+        this.owner = owner;
+    }
+
+    public void dial(String phoneNumber) {
+        System.out.println(this.owner + " 's Phone is calling " + phoneNumber);
+    }
+
+    public void dial (CellPhone phone){
+        System.out.println(owner + "'s phone is calling "+ phone.getPhoneNumber());
     }
 
     public int getSerialNumber() {
